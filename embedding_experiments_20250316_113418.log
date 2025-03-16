@@ -1,0 +1,240 @@
+2025-03-16 11:34:18,394 - INFO - Starting embedding experiments script
+2025-03-16 11:34:30,789 - INFO - Successfully imported custom modules
+2025-03-16 11:34:30,789 - INFO - Script called from command line
+2025-03-16 11:34:30,790 - INFO - Parsing arguments...
+2025-03-16 11:34:30,793 - INFO - ================================================================================
+2025-03-16 11:34:30,793 - INFO - Embedding-Enhanced Token Pair Bidirectional Validation
+2025-03-16 11:34:30,794 - INFO - ================================================================================
+2025-03-16 11:34:30,794 - INFO - Arguments: {'modelset': './modelset-dataset', 'output': 'results', 'experiment': 'all', 'domain': None, 'limit': 5}
+2025-03-16 11:34:30,795 - INFO - Creating output directory: results
+2025-03-16 11:34:30,796 - INFO - Creating figures directory: results\figures
+2025-03-16 11:34:30,796 - INFO - Running basic experiment with modelset=./modelset-dataset
+2025-03-16 11:34:30,797 - INFO - 
+Running Embedding-Enhanced Basic Experiment...
+2025-03-16 11:34:30,798 - INFO - Initializing components...
+2025-03-16 11:34:35,203 - INFO - Components initialized
+2025-03-16 11:34:35,203 - INFO - Getting transformation pairs...
+2025-03-16 11:34:35,206 - INFO - Found 5 transformation pairs
+2025-03-16 11:34:35,206 - INFO - 
+Processing pair 1: library Translation
+2025-03-16 11:34:35,209 - INFO -   Loaded source model: repo-genmymodel-uml/data/b7b2f9c0-eada-4d61-996c-65d45706e3f2.xmi (uml)
+2025-03-16 11:34:35,210 - INFO -   Loaded target model: repo-ecore-all/data/PSI-Polska/teneo/hibernate/org.eclipse.emf.teneo.hibernate.examples/model/extlibrary.ecore (ecore)
+2025-03-16 11:34:35,210 - INFO -   Generating embeddings for models...
+2025-03-16 11:34:35,523 - INFO -   Converted source model to 7 token pairs
+2025-03-16 11:34:35,523 - INFO -   Converted target model to 7 token pairs
+2025-03-16 11:34:35,524 - INFO -   Created 1 transformation rules
+2025-03-16 11:34:40,226 - INFO -   Regular Forward Validation: 0.9053
+2025-03-16 11:34:40,226 - INFO -   Regular Backward Validation: 0.9748
+2025-03-16 11:34:40,227 - INFO -   Regular Transformation Quality: 0.9400
+2025-03-16 11:34:40,227 - INFO -   Enhanced Backward Validation: 0.9707
+2025-03-16 11:34:40,227 - INFO -   Enhanced Transformation Quality: 0.9380
+2025-03-16 11:34:40,548 - INFO -   Direct embedding similarity: 0.9225
+2025-03-16 11:34:40,549 - INFO -   Token pair similarity: 0.3040
+2025-03-16 11:34:40,549 - INFO - 
+Processing pair 2: library Translation
+2025-03-16 11:34:40,550 - INFO -   Loaded source model: repo-genmymodel-uml/data/b7b2f9c0-eada-4d61-996c-65d45706e3f2.xmi (uml)
+2025-03-16 11:34:40,551 - INFO -   Loaded target model: repo-ecore-all/data/eclipse/emf.compare/plugins/org.eclipse.emf.compare.rcp.ui.tests/src/org/eclipse/emf/compare/rcp/ui/tests/contentmergeviewer/accessor/match/data/right.ecore (ecore)
+2025-03-16 11:34:40,551 - INFO -   Generating embeddings for models...
+2025-03-16 11:34:40,970 - INFO -   Converted source model to 7 token pairs
+2025-03-16 11:34:40,971 - INFO -   Converted target model to 7 token pairs
+2025-03-16 11:34:40,972 - INFO -   Created 1 transformation rules
+2025-03-16 11:34:43,661 - INFO -   Regular Forward Validation: 0.9053
+2025-03-16 11:34:43,661 - INFO -   Regular Backward Validation: 0.9748
+2025-03-16 11:34:43,662 - INFO -   Regular Transformation Quality: 0.9400
+2025-03-16 11:34:43,662 - INFO -   Enhanced Backward Validation: 0.9632
+2025-03-16 11:34:43,663 - INFO -   Enhanced Transformation Quality: 0.9342
+2025-03-16 11:34:44,035 - INFO -   Direct embedding similarity: 0.8726
+2025-03-16 11:34:44,036 - INFO -   Token pair similarity: 0.3040
+2025-03-16 11:34:44,037 - INFO - 
+Processing pair 3: library Translation
+2025-03-16 11:34:44,039 - INFO -   Loaded source model: repo-genmymodel-uml/data/b7b2f9c0-eada-4d61-996c-65d45706e3f2.xmi (uml)
+2025-03-16 11:34:44,040 - INFO -   Loaded target model: repo-ecore-all/data/Vinayakatk/FormSection/my.generator.project/src/metamodel/Library.ecore (ecore)
+2025-03-16 11:34:44,040 - INFO -   Generating embeddings for models...
+2025-03-16 11:34:44,411 - INFO -   Converted source model to 7 token pairs
+2025-03-16 11:34:44,412 - INFO -   Converted target model to 7 token pairs
+2025-03-16 11:34:44,412 - INFO -   Created 1 transformation rules
+2025-03-16 11:34:47,150 - INFO -   Regular Forward Validation: 0.9053
+2025-03-16 11:34:47,151 - INFO -   Regular Backward Validation: 0.9748
+2025-03-16 11:34:47,152 - INFO -   Regular Transformation Quality: 0.9400
+2025-03-16 11:34:47,152 - INFO -   Enhanced Backward Validation: 0.9648
+2025-03-16 11:34:47,153 - INFO -   Enhanced Transformation Quality: 0.9350
+2025-03-16 11:34:47,521 - INFO -   Direct embedding similarity: 0.8833
+2025-03-16 11:34:47,522 - INFO -   Token pair similarity: 0.3040
+2025-03-16 11:34:47,522 - INFO - 
+Processing pair 4: library Translation
+2025-03-16 11:34:47,525 - INFO -   Loaded source model: repo-genmymodel-uml/data/b7b2f9c0-eada-4d61-996c-65d45706e3f2.xmi (uml)
+2025-03-16 11:34:47,526 - INFO -   Loaded target model: repo-ecore-all/data/tue-mdse/ocl-dataset/dataset/repos/MDEGroup/MDEForge/mdeforge/githubmetamodels/Copy of library.ecore (ecore)
+2025-03-16 11:34:47,526 - INFO -   Generating embeddings for models...
+2025-03-16 11:34:47,823 - INFO -   Converted source model to 7 token pairs
+2025-03-16 11:34:47,824 - INFO -   Converted target model to 7 token pairs
+2025-03-16 11:34:47,824 - INFO -   Created 1 transformation rules
+2025-03-16 11:34:50,095 - INFO -   Regular Forward Validation: 0.9053
+2025-03-16 11:34:50,096 - INFO -   Regular Backward Validation: 0.9748
+2025-03-16 11:34:50,096 - INFO -   Regular Transformation Quality: 0.9400
+2025-03-16 11:34:50,096 - INFO -   Enhanced Backward Validation: 0.9693
+2025-03-16 11:34:50,097 - INFO -   Enhanced Transformation Quality: 0.9373
+2025-03-16 11:34:50,370 - INFO -   Direct embedding similarity: 0.9131
+2025-03-16 11:34:50,370 - INFO -   Token pair similarity: 0.3040
+2025-03-16 11:34:50,371 - INFO - 
+Processing pair 5: library Translation
+2025-03-16 11:34:50,372 - INFO -   Loaded source model: repo-genmymodel-uml/data/b7b2f9c0-eada-4d61-996c-65d45706e3f2.xmi (uml)
+2025-03-16 11:34:50,373 - INFO -   Loaded target model: repo-ecore-all/data/shresthap/clubuml2013/trunk/Display Diagram/Upload_And_Display_UML/WebContent/test_ecore/library.ecore (ecore)
+2025-03-16 11:34:50,373 - INFO -   Generating embeddings for models...
+2025-03-16 11:34:50,680 - INFO -   Converted source model to 7 token pairs
+2025-03-16 11:34:50,681 - INFO -   Converted target model to 7 token pairs
+2025-03-16 11:34:50,681 - INFO -   Created 1 transformation rules
+2025-03-16 11:34:52,945 - INFO -   Regular Forward Validation: 0.9053
+2025-03-16 11:34:52,946 - INFO -   Regular Backward Validation: 0.9748
+2025-03-16 11:34:52,946 - INFO -   Regular Transformation Quality: 0.9400
+2025-03-16 11:34:52,947 - INFO -   Enhanced Backward Validation: 0.9649
+2025-03-16 11:34:52,947 - INFO -   Enhanced Transformation Quality: 0.9351
+2025-03-16 11:34:53,237 - INFO -   Direct embedding similarity: 0.8839
+2025-03-16 11:34:53,238 - INFO -   Token pair similarity: 0.3040
+2025-03-16 11:34:53,243 - INFO - Results saved to results\embedding_enhanced_experiment.json
+2025-03-16 11:34:53,797 - INFO - Quality comparison chart saved to results\figures\quality_comparison.png
+2025-03-16 11:34:53,959 - INFO - Running comparison experiment with modelset=./modelset-dataset
+2025-03-16 11:34:53,960 - INFO - 
+Running Detailed Comparison Experiment...
+2025-03-16 11:34:53,961 - INFO - Initializing components...
+2025-03-16 11:34:56,058 - INFO - Components initialized
+2025-03-16 11:34:56,059 - INFO - Getting transformation pairs...
+2025-03-16 11:34:56,062 - INFO - Found 10 transformation pairs (5 translation, 5 revision)
+2025-03-16 11:34:56,063 - INFO - 
+Processing pair 1: library Translation (translation)
+2025-03-16 11:34:56,065 - INFO -   Loaded source model: repo-genmymodel-uml/data/b7b2f9c0-eada-4d61-996c-65d45706e3f2.xmi (uml)
+2025-03-16 11:34:56,066 - INFO -   Loaded target model: repo-ecore-all/data/PSI-Polska/teneo/hibernate/org.eclipse.emf.teneo.hibernate.examples/model/extlibrary.ecore (ecore)
+2025-03-16 11:34:56,067 - INFO -   Generating embeddings for models...
+2025-03-16 11:34:56,606 - INFO -   Direct embedding similarity: 0.9225
+2025-03-16 11:34:56,606 - INFO -   Created 1 transformation rules
+2025-03-16 11:34:58,987 - INFO -   Regular Forward Validation: 0.9053
+2025-03-16 11:34:58,988 - INFO -   Regular Backward Validation: 0.9748
+2025-03-16 11:34:58,988 - INFO -   Regular Transformation Quality: 0.9400
+2025-03-16 11:34:58,989 - INFO -   Enhanced Backward Validation: 0.9707
+2025-03-16 11:34:58,989 - INFO -   Enhanced Transformation Quality: 0.9380
+2025-03-16 11:34:58,989 - INFO -   Improvement: -0.20%
+2025-03-16 11:34:58,990 - INFO - 
+Processing pair 2: library Translation (translation)
+2025-03-16 11:34:58,992 - INFO -   Loaded source model: repo-genmymodel-uml/data/b7b2f9c0-eada-4d61-996c-65d45706e3f2.xmi (uml)
+2025-03-16 11:34:58,992 - INFO -   Loaded target model: repo-ecore-all/data/eclipse/emf.compare/plugins/org.eclipse.emf.compare.rcp.ui.tests/src/org/eclipse/emf/compare/rcp/ui/tests/contentmergeviewer/accessor/match/data/right.ecore (ecore)
+2025-03-16 11:34:58,992 - INFO -   Generating embeddings for models...
+2025-03-16 11:34:59,669 - INFO -   Direct embedding similarity: 0.8726
+2025-03-16 11:34:59,670 - INFO -   Created 1 transformation rules
+2025-03-16 11:35:02,401 - INFO -   Regular Forward Validation: 0.9053
+2025-03-16 11:35:02,404 - INFO -   Regular Backward Validation: 0.9748
+2025-03-16 11:35:02,404 - INFO -   Regular Transformation Quality: 0.9400
+2025-03-16 11:35:02,405 - INFO -   Enhanced Backward Validation: 0.9632
+2025-03-16 11:35:02,405 - INFO -   Enhanced Transformation Quality: 0.9342
+2025-03-16 11:35:02,405 - INFO -   Improvement: -0.58%
+2025-03-16 11:35:02,406 - INFO - 
+Processing pair 3: library Translation (translation)
+2025-03-16 11:35:02,409 - INFO -   Loaded source model: repo-genmymodel-uml/data/b7b2f9c0-eada-4d61-996c-65d45706e3f2.xmi (uml)
+2025-03-16 11:35:02,409 - INFO -   Loaded target model: repo-ecore-all/data/Vinayakatk/FormSection/my.generator.project/src/metamodel/Library.ecore (ecore)
+2025-03-16 11:35:02,410 - INFO -   Generating embeddings for models...
+2025-03-16 11:35:03,179 - INFO -   Direct embedding similarity: 0.8833
+2025-03-16 11:35:03,180 - INFO -   Created 1 transformation rules
+2025-03-16 11:35:06,216 - INFO -   Regular Forward Validation: 0.9053
+2025-03-16 11:35:06,217 - INFO -   Regular Backward Validation: 0.9748
+2025-03-16 11:35:06,218 - INFO -   Regular Transformation Quality: 0.9400
+2025-03-16 11:35:06,218 - INFO -   Enhanced Backward Validation: 0.9648
+2025-03-16 11:35:06,219 - INFO -   Enhanced Transformation Quality: 0.9350
+2025-03-16 11:35:06,219 - INFO -   Improvement: -0.50%
+2025-03-16 11:35:06,220 - INFO - 
+Processing pair 4: library Translation (translation)
+2025-03-16 11:35:06,223 - INFO -   Loaded source model: repo-genmymodel-uml/data/b7b2f9c0-eada-4d61-996c-65d45706e3f2.xmi (uml)
+2025-03-16 11:35:06,224 - INFO -   Loaded target model: repo-ecore-all/data/tue-mdse/ocl-dataset/dataset/repos/MDEGroup/MDEForge/mdeforge/githubmetamodels/Copy of library.ecore (ecore)
+2025-03-16 11:35:06,224 - INFO -   Generating embeddings for models...
+2025-03-16 11:35:07,069 - INFO -   Direct embedding similarity: 0.9131
+2025-03-16 11:35:07,070 - INFO -   Created 1 transformation rules
+2025-03-16 11:35:10,152 - INFO -   Regular Forward Validation: 0.9053
+2025-03-16 11:35:10,154 - INFO -   Regular Backward Validation: 0.9748
+2025-03-16 11:35:10,157 - INFO -   Regular Transformation Quality: 0.9400
+2025-03-16 11:35:10,158 - INFO -   Enhanced Backward Validation: 0.9693
+2025-03-16 11:35:10,158 - INFO -   Enhanced Transformation Quality: 0.9373
+2025-03-16 11:35:10,159 - INFO -   Improvement: -0.27%
+2025-03-16 11:35:10,159 - INFO - 
+Processing pair 5: library Translation (translation)
+2025-03-16 11:35:10,162 - INFO -   Loaded source model: repo-genmymodel-uml/data/b7b2f9c0-eada-4d61-996c-65d45706e3f2.xmi (uml)
+2025-03-16 11:35:10,163 - INFO -   Loaded target model: repo-ecore-all/data/shresthap/clubuml2013/trunk/Display Diagram/Upload_And_Display_UML/WebContent/test_ecore/library.ecore (ecore)
+2025-03-16 11:35:10,164 - INFO -   Generating embeddings for models...
+2025-03-16 11:35:10,856 - INFO -   Direct embedding similarity: 0.8839
+2025-03-16 11:35:10,856 - INFO -   Created 1 transformation rules
+2025-03-16 11:35:13,618 - INFO -   Regular Forward Validation: 0.9053
+2025-03-16 11:35:13,619 - INFO -   Regular Backward Validation: 0.9748
+2025-03-16 11:35:13,619 - INFO -   Regular Transformation Quality: 0.9400
+2025-03-16 11:35:13,620 - INFO -   Enhanced Backward Validation: 0.9649
+2025-03-16 11:35:13,620 - INFO -   Enhanced Transformation Quality: 0.9351
+2025-03-16 11:35:13,621 - INFO -   Improvement: -0.49%
+2025-03-16 11:35:13,621 - INFO - 
+Processing pair 6: travel Revision (revision)
+2025-03-16 11:35:13,628 - INFO -   Loaded source model: repo-genmymodel-uml/data/64d73a9a-d42d-4090-b6ce-9496e444dcf0.xmi (uml)
+2025-03-16 11:35:13,628 - INFO -   Loaded target model: repo-genmymodel-uml/data/81785248-09b5-44cc-8994-1cd0c8b6a645.xmi (uml)
+2025-03-16 11:35:13,629 - INFO -   Generating embeddings for models...
+2025-03-16 11:35:15,886 - INFO -   Direct embedding similarity: 0.9538
+2025-03-16 11:35:15,887 - INFO -   Created 3 transformation rules
+2025-03-16 11:35:18,706 - INFO -   Regular Forward Validation: 0.9411
+2025-03-16 11:35:18,707 - INFO -   Regular Backward Validation: 0.9578
+2025-03-16 11:35:18,708 - INFO -   Regular Transformation Quality: 0.9453
+2025-03-16 11:35:18,708 - INFO -   Enhanced Backward Validation: 0.9635
+2025-03-16 11:35:18,709 - INFO -   Enhanced Transformation Quality: 0.9467
+2025-03-16 11:35:18,709 - INFO -   Improvement: 0.14%
+2025-03-16 11:35:18,709 - INFO - 
+Processing pair 7: travel Revision (revision)
+2025-03-16 11:35:18,713 - INFO -   Loaded source model: repo-genmymodel-uml/data/81785248-09b5-44cc-8994-1cd0c8b6a645.xmi (uml)
+2025-03-16 11:35:18,714 - INFO -   Loaded target model: repo-genmymodel-uml/data/b1c6694b-7781-427b-a027-669a32b60e35.xmi (uml)
+2025-03-16 11:35:18,714 - INFO -   Generating embeddings for models...
+2025-03-16 11:35:20,450 - INFO -   Direct embedding similarity: 0.9380
+2025-03-16 11:35:20,451 - INFO -   Created 3 transformation rules
+2025-03-16 11:35:24,614 - INFO -   Regular Forward Validation: 0.9385
+2025-03-16 11:35:24,615 - INFO -   Regular Backward Validation: 0.8938
+2025-03-16 11:35:24,616 - INFO -   Regular Transformation Quality: 0.9274
+2025-03-16 11:35:24,616 - INFO -   Enhanced Backward Validation: 0.9164
+2025-03-16 11:35:24,616 - INFO -   Enhanced Transformation Quality: 0.9330
+2025-03-16 11:35:24,617 - INFO -   Improvement: 0.56%
+2025-03-16 11:35:24,617 - INFO - 
+Processing pair 8: travel Revision (revision)
+2025-03-16 11:35:24,645 - INFO -   Loaded source model: repo-genmymodel-uml/data/b1c6694b-7781-427b-a027-669a32b60e35.xmi (uml)
+2025-03-16 11:35:24,646 - INFO -   Loaded target model: repo-genmymodel-uml/data/3286a981-cc46-400c-bdf7-8f24285a8ca3.xmi (uml)
+2025-03-16 11:35:24,646 - INFO -   Generating embeddings for models...
+2025-03-16 11:35:25,862 - INFO -   Direct embedding similarity: 0.8711
+2025-03-16 11:35:25,863 - INFO -   Created 3 transformation rules
+2025-03-16 11:35:28,524 - INFO -   Regular Forward Validation: 0.9406
+2025-03-16 11:35:28,525 - INFO -   Regular Backward Validation: 0.9584
+2025-03-16 11:35:28,525 - INFO -   Regular Transformation Quality: 0.9450
+2025-03-16 11:35:28,525 - INFO -   Enhanced Backward Validation: 0.9516
+2025-03-16 11:35:28,526 - INFO -   Enhanced Transformation Quality: 0.9433
+2025-03-16 11:35:28,526 - INFO -   Improvement: -0.17%
+2025-03-16 11:35:28,526 - INFO - 
+Processing pair 9: travel Revision (revision)
+2025-03-16 11:35:28,532 - INFO -   Loaded source model: repo-genmymodel-uml/data/3286a981-cc46-400c-bdf7-8f24285a8ca3.xmi (uml)
+2025-03-16 11:35:28,532 - INFO -   Loaded target model: repo-genmymodel-uml/data/21dc1a19-77da-4bec-a72a-c5e20fbef990.xmi (uml)
+2025-03-16 11:35:28,533 - INFO -   Generating embeddings for models...
+2025-03-16 11:35:30,588 - INFO -   Direct embedding similarity: 0.8757
+2025-03-16 11:35:30,589 - INFO -   Created 3 transformation rules
+2025-03-16 11:35:33,424 - INFO -   Regular Forward Validation: 0.9419
+2025-03-16 11:35:33,425 - INFO -   Regular Backward Validation: 0.9565
+2025-03-16 11:35:33,426 - INFO -   Regular Transformation Quality: 0.9455
+2025-03-16 11:35:33,426 - INFO -   Enhanced Backward Validation: 0.9509
+2025-03-16 11:35:33,427 - INFO -   Enhanced Transformation Quality: 0.9441
+2025-03-16 11:35:33,427 - INFO -   Improvement: -0.14%
+2025-03-16 11:35:33,427 - INFO - 
+Processing pair 10: travel Revision (revision)
+2025-03-16 11:35:33,455 - INFO -   Loaded source model: repo-genmymodel-uml/data/21dc1a19-77da-4bec-a72a-c5e20fbef990.xmi (uml)
+2025-03-16 11:35:33,455 - INFO -   Loaded target model: repo-genmymodel-uml/data/c048477c-aa54-473d-9b08-2884b6cfc772.xmi (uml)
+2025-03-16 11:35:33,456 - INFO -   Generating embeddings for models...
+2025-03-16 11:35:35,586 - INFO -   Direct embedding similarity: 0.9896
+2025-03-16 11:35:35,587 - INFO -   Created 3 transformation rules
+2025-03-16 11:35:39,681 - INFO -   Regular Forward Validation: 0.9381
+2025-03-16 11:35:39,682 - INFO -   Regular Backward Validation: 0.8929
+2025-03-16 11:35:39,682 - INFO -   Regular Transformation Quality: 0.9268
+2025-03-16 11:35:39,683 - INFO -   Enhanced Backward Validation: 0.9235
+2025-03-16 11:35:39,683 - INFO -   Enhanced Transformation Quality: 0.9344
+2025-03-16 11:35:39,684 - INFO -   Improvement: 0.76%
+2025-03-16 11:35:39,689 - INFO - Results saved to results\detailed_comparison.json
+2025-03-16 11:35:40,388 - INFO - Type comparison chart saved to results\figures\type_comparison.png
+2025-03-16 11:35:40,558 - INFO - 
+================================================================================
+2025-03-16 11:35:40,558 - INFO - Experiments complete! Results saved in results
+2025-03-16 11:35:40,558 - INFO - ================================================================================
+2025-03-16 11:35:40,559 - INFO - Figures saved in results\figures
+2025-03-16 11:35:40,559 - INFO - ================================================================================
+2025-03-16 11:35:40,559 - INFO - Script execution completed

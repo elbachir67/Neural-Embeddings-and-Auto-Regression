@@ -1,0 +1,212 @@
+[
+  {
+    "pair_name": "rental Translation",
+    "pair_type": "translation",
+    "source_id": "repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi",
+    "target_id": "repo-ecore-all/data/artist-project/ARTIST/source/Tooling/migration/application-discovery-understanding/MUT/Component_Viewpoint_MOMoT/org.eclipse.emf.henshin.examples/src/org/eclipse/emf/henshin/examples/ecore2rdb/CarRental.ecore",
+    "direct_embedding_similarity": 0.8407804369926453,
+    "regular": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9679848551750183,
+      "transformation_quality": 0.9363886713981628
+    },
+    "enhanced": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9537064641714096,
+      "transformation_quality": 0.9292494758963585
+    },
+    "improvement": -0.007139195501804307,
+    "applied_rules": [
+      "ClassToEClass"
+    ]
+  },
+  {
+    "pair_name": "rental Translation",
+    "pair_type": "translation",
+    "source_id": "repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi",
+    "target_id": "repo-ecore-all/data/tue-mdse/ocl-dataset/dataset/repos/MDEGroup/MDEForge/mdeforge/githubmetamodels/rentalSansGmfAnnot.ecore",
+    "direct_embedding_similarity": 0.9183679819107056,
+    "regular": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9679848551750183,
+      "transformation_quality": 0.9363886713981628
+    },
+    "enhanced": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9653445959091187,
+      "transformation_quality": 0.935068541765213
+    },
+    "improvement": -0.001320129632949807,
+    "applied_rules": [
+      "ClassToEClass"
+    ]
+  },
+  {
+    "pair_name": "rental Translation",
+    "pair_type": "translation",
+    "source_id": "repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi",
+    "target_id": "repo-ecore-all/data/tue-mdse/ocl-dataset/dataset/repos/MDEGroup/MDEForge/mdeforge/githubmetamodels/rental.ecore",
+    "direct_embedding_similarity": 0.9218969941139221,
+    "regular": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9679848551750183,
+      "transformation_quality": 0.9363886713981628
+    },
+    "enhanced": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9658739477396011,
+      "transformation_quality": 0.9353332176804543
+    },
+    "improvement": -0.0010554537177085432,
+    "applied_rules": [
+      "ClassToEClass"
+    ]
+  },
+  {
+    "pair_name": "rental Translation",
+    "pair_type": "translation",
+    "source_id": "repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi",
+    "target_id": "repo-ecore-all/data/sunwuliang/SlicingProject2.0/ClassModelSlicing/ecores/CarRental.ecore",
+    "direct_embedding_similarity": 0.9188734292984009,
+    "regular": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9679848551750183,
+      "transformation_quality": 0.9363886713981628
+    },
+    "enhanced": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.965420413017273,
+      "transformation_quality": 0.9351064503192902
+    },
+    "improvement": -0.0012822210788726585,
+    "applied_rules": [
+      "ClassToEClass"
+    ]
+  },
+  {
+    "pair_name": "rental Translation",
+    "pair_type": "translation",
+    "source_id": "repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi",
+    "target_id": "repo-ecore-all/data/przigoda/model-finder/de.agra.emf.modelfinder.applications.debugging.tests/models/use-models/CarRental2.ecore",
+    "direct_embedding_similarity": 0.844679594039917,
+    "regular": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9679848551750183,
+      "transformation_quality": 0.9363886713981628
+    },
+    "enhanced": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9542913377285004,
+      "transformation_quality": 0.9295419126749038
+    },
+    "improvement": -0.006846758723259017,
+    "applied_rules": [
+      "ClassToEClass"
+    ]
+  },
+  {
+    "pair_name": "travel Revision",
+    "pair_type": "revision",
+    "source_id": "repo-genmymodel-uml/data/64d73a9a-d42d-4090-b6ce-9496e444dcf0.xmi",
+    "target_id": "repo-genmymodel-uml/data/81785248-09b5-44cc-8994-1cd0c8b6a645.xmi",
+    "direct_embedding_similarity": 0.9537806510925293,
+    "regular": {
+      "forward_validation": 0.9410777688026428,
+      "backward_validation": 0.9577783048152924,
+      "transformation_quality": 0.9452529028058052
+    },
+    "enhanced": {
+      "forward_validation": 0.9410777688026428,
+      "backward_validation": 0.963511911034584,
+      "transformation_quality": 0.9466863043606282
+    },
+    "improvement": 0.0014334015548229662,
+    "applied_rules": [
+      "OperationToOperation"
+    ]
+  },
+  {
+    "pair_name": "travel Revision",
+    "pair_type": "revision",
+    "source_id": "repo-genmymodel-uml/data/81785248-09b5-44cc-8994-1cd0c8b6a645.xmi",
+    "target_id": "repo-genmymodel-uml/data/b1c6694b-7781-427b-a027-669a32b60e35.xmi",
+    "direct_embedding_similarity": 0.9379864931106567,
+    "regular": {
+      "forward_validation": 0.9385373592376709,
+      "backward_validation": 0.8938036561012268,
+      "transformation_quality": 0.9273539334535599
+    },
+    "enhanced": {
+      "forward_validation": 0.9385373592376709,
+      "backward_validation": 0.9163605332374573,
+      "transformation_quality": 0.9329931527376175
+    },
+    "improvement": 0.005639219284057639,
+    "applied_rules": [
+      "AttributeToAttribute"
+    ]
+  },
+  {
+    "pair_name": "travel Revision",
+    "pair_type": "revision",
+    "source_id": "repo-genmymodel-uml/data/b1c6694b-7781-427b-a027-669a32b60e35.xmi",
+    "target_id": "repo-genmymodel-uml/data/3286a981-cc46-400c-bdf7-8f24285a8ca3.xmi",
+    "direct_embedding_similarity": 0.8711274862289429,
+    "regular": {
+      "forward_validation": 0.9405699968338013,
+      "backward_validation": 0.9584122598171234,
+      "transformation_quality": 0.9450305625796318
+    },
+    "enhanced": {
+      "forward_validation": 0.9405699968338013,
+      "backward_validation": 0.9515577048063277,
+      "transformation_quality": 0.9433169238269329
+    },
+    "improvement": -0.0017136387526989205,
+    "applied_rules": [
+      "OperationToOperation"
+    ]
+  },
+  {
+    "pair_name": "travel Revision",
+    "pair_type": "revision",
+    "source_id": "repo-genmymodel-uml/data/3286a981-cc46-400c-bdf7-8f24285a8ca3.xmi",
+    "target_id": "repo-genmymodel-uml/data/21dc1a19-77da-4bec-a72a-c5e20fbef990.xmi",
+    "direct_embedding_similarity": 0.8756515979766846,
+    "regular": {
+      "forward_validation": 0.941866397857666,
+      "backward_validation": 0.9564671218395233,
+      "transformation_quality": 0.9455165788531303
+    },
+    "enhanced": {
+      "forward_validation": 0.941866397857666,
+      "backward_validation": 0.950874724984169,
+      "transformation_quality": 0.9441184796392917
+    },
+    "improvement": -0.0013980992138385995,
+    "applied_rules": [
+      "OperationToOperation"
+    ]
+  },
+  {
+    "pair_name": "travel Revision",
+    "pair_type": "revision",
+    "source_id": "repo-genmymodel-uml/data/21dc1a19-77da-4bec-a72a-c5e20fbef990.xmi",
+    "target_id": "repo-genmymodel-uml/data/c048477c-aa54-473d-9b08-2884b6cfc772.xmi",
+    "direct_embedding_similarity": 0.9895809292793274,
+    "regular": {
+      "forward_validation": 0.9381079077720642,
+      "backward_validation": 0.892903596162796,
+      "transformation_quality": 0.9268068298697472
+    },
+    "enhanced": {
+      "forward_validation": 0.9381079077720642,
+      "backward_validation": 0.9234696567058562,
+      "transformation_quality": 0.9344483450055122
+    },
+    "improvement": 0.0076415151357650535,
+    "applied_rules": [
+      "AttributeToAttribute"
+    ]
+  }
+]

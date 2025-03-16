@@ -1,0 +1,117 @@
+2025-03-16 01:50:27,765 - INFO - Python version: 3.10.14 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:44:50) [MSC v.1916 64 bit (AMD64)]
+2025-03-16 01:50:27,765 - INFO - Current working directory: C:\codes\models\token-pair-validation\modelset-integration
+2025-03-16 01:50:27,765 - INFO - Starting embedding experiments script with phased debugging
+2025-03-16 01:50:27,766 - INFO - === PHASE 1: Importing packages ===
+2025-03-16 01:50:27,766 - DEBUG - Importing base packages...
+2025-03-16 01:50:28,236 - DEBUG - matplotlib data path: C:\Users\Lenovo\anaconda3\envs\cs160\lib\site-packages\matplotlib\mpl-data
+2025-03-16 01:50:28,269 - DEBUG - CONFIGDIR=C:\Users\Lenovo\.matplotlib
+2025-03-16 01:50:28,272 - DEBUG - interactive is False
+2025-03-16 01:50:28,272 - DEBUG - platform is win32
+2025-03-16 01:50:28,284 - DEBUG - Matplotlib version: 3.8.0
+2025-03-16 01:50:28,284 - DEBUG - Set matplotlib to non-interactive backend
+2025-03-16 01:50:28,373 - DEBUG - CACHEDIR=C:\Users\Lenovo\.matplotlib
+2025-03-16 01:50:28,378 - DEBUG - Using fontManager instance from C:\Users\Lenovo\.matplotlib\fontlist-v330.json
+2025-03-16 01:50:28,876 - DEBUG - Imported matplotlib.pyplot
+2025-03-16 01:50:28,877 - DEBUG - Imported numpy
+2025-03-16 01:50:28,877 - DEBUG - Imported pathlib
+2025-03-16 01:50:28,877 - DEBUG - Importing torch...
+2025-03-16 01:50:32,852 - DEBUG - Imported torch (version: 2.6.0+cpu)
+2025-03-16 01:50:32,853 - DEBUG - Importing sklearn components...
+2025-03-16 01:50:34,291 - DEBUG - Imported sklearn components
+2025-03-16 01:50:34,291 - INFO - Base packages imported successfully in 6.52 seconds
+2025-03-16 01:50:34,291 - INFO - === PHASE 2: Importing custom modules ===
+2025-03-16 01:50:34,291 - DEBUG - Importing bidirectional_validator...
+2025-03-16 01:50:43,317 - DEBUG - Imported bidirectional_validator
+2025-03-16 01:50:43,318 - DEBUG - Importing modelset_loader...
+2025-03-16 01:50:44,681 - DEBUG - Imported modelset_loader
+2025-03-16 01:50:44,681 - DEBUG - Importing token_pair_adapter...
+2025-03-16 01:50:44,684 - DEBUG - Imported token_pair_adapter
+2025-03-16 01:50:44,685 - DEBUG - Importing embedding_generator...
+2025-03-16 01:50:44,688 - DEBUG - Imported embedding_generator
+2025-03-16 01:50:44,688 - INFO - Custom modules imported successfully in 10.40 seconds
+2025-03-16 01:50:44,689 - INFO - Script called from command line
+2025-03-16 01:50:44,689 - INFO - === PHASE 0: Starting main function ===
+2025-03-16 01:50:44,689 - DEBUG - Parsing command line arguments
+2025-03-16 01:50:44,693 - DEBUG - Parsed arguments: {'modelset': './modelset-dataset', 'output': 'results', 'experiment': 'basic', 'domain': None, 'limit': 5}
+2025-03-16 01:50:44,693 - INFO - ==== Embedding-Enhanced Token Pair Bidirectional Validation ====
+2025-03-16 01:50:44,693 - INFO - Arguments: {'modelset': './modelset-dataset', 'output': 'results', 'experiment': 'basic', 'domain': None, 'limit': 5}
+2025-03-16 01:50:44,694 - DEBUG - Ensured output directory exists: results
+2025-03-16 01:50:44,695 - INFO - === PHASE 3: Starting basic experiment ===
+2025-03-16 01:50:44,695 - DEBUG - Created output directory: results
+2025-03-16 01:50:44,696 - INFO - === PHASE 3.1: Initializing components ===
+2025-03-16 01:50:44,696 - DEBUG - Initializing ModelSetLoader...
+2025-03-16 01:50:45,287 - DEBUG - ModelSetLoader initialized
+2025-03-16 01:50:45,288 - DEBUG - Initializing TokenPairAdapter...
+2025-03-16 01:50:45,288 - DEBUG - TokenPairAdapter initialized
+2025-03-16 01:50:45,288 - DEBUG - Initializing ContextEncoder...
+2025-03-16 01:50:45,322 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-16 01:50:46,784 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2025-03-16 01:50:47,254 - DEBUG - https://huggingface.co:443 "HEAD /bert-base-uncased/resolve/main/config.json HTTP/11" 200 0
+2025-03-16 01:50:48,879 - DEBUG - ContextEncoder initialized
+2025-03-16 01:50:48,880 - DEBUG - Initializing BidirectionalValidator...
+2025-03-16 01:50:48,880 - DEBUG - BidirectionalValidator initialized
+2025-03-16 01:50:48,881 - DEBUG - Initializing IntentAwareTransformer...
+2025-03-16 01:50:48,882 - DEBUG - IntentAwareTransformer initialized
+2025-03-16 01:50:48,882 - DEBUG - Initializing EmbeddingGenerator...
+2025-03-16 01:50:49,200 - DEBUG - https://huggingface.co:443 "HEAD /distilbert-base-uncased/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2025-03-16 01:50:49,610 - DEBUG - https://huggingface.co:443 "HEAD /distilbert-base-uncased/resolve/main/config.json HTTP/11" 200 0
+2025-03-16 01:50:49,763 - DEBUG - EmbeddingGenerator initialized
+2025-03-16 01:50:49,764 - INFO - Components initialized in 5.07 seconds
+2025-03-16 01:50:49,764 - INFO - === PHASE 3.2: Getting transformation pairs ===
+2025-03-16 01:50:49,765 - DEBUG - Getting transformation pairs...
+2025-03-16 01:50:49,767 - INFO - Found 5 transformation pairs in 0.00 seconds
+2025-03-16 01:50:49,768 - DEBUG - Pair 1: rental Translation - translation
+2025-03-16 01:50:49,768 - DEBUG -   Source: repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi (UML)
+2025-03-16 01:50:49,769 - DEBUG -   Target: repo-ecore-all/data/artist-project/ARTIST/source/Tooling/migration/application-discovery-understanding/MUT/Component_Viewpoint_MOMoT/org.eclipse.emf.henshin.examples/src/org/eclipse/emf/henshin/examples/ecore2rdb/CarRental.ecore (Ecore)
+2025-03-16 01:50:49,769 - DEBUG - Pair 2: rental Translation - translation
+2025-03-16 01:50:49,770 - DEBUG -   Source: repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi (UML)
+2025-03-16 01:50:49,770 - DEBUG -   Target: repo-ecore-all/data/tue-mdse/ocl-dataset/dataset/repos/MDEGroup/MDEForge/mdeforge/githubmetamodels/rentalSansGmfAnnot.ecore (Ecore)
+2025-03-16 01:50:49,771 - DEBUG - Pair 3: rental Translation - translation
+2025-03-16 01:50:49,772 - DEBUG -   Source: repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi (UML)
+2025-03-16 01:50:49,772 - DEBUG -   Target: repo-ecore-all/data/tue-mdse/ocl-dataset/dataset/repos/MDEGroup/MDEForge/mdeforge/githubmetamodels/rental.ecore (Ecore)
+2025-03-16 01:50:49,773 - DEBUG - Pair 4: rental Translation - translation
+2025-03-16 01:50:49,773 - DEBUG -   Source: repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi (UML)
+2025-03-16 01:50:49,774 - DEBUG -   Target: repo-ecore-all/data/sunwuliang/SlicingProject2.0/ClassModelSlicing/ecores/CarRental.ecore (Ecore)
+2025-03-16 01:50:49,774 - DEBUG - Pair 5: rental Translation - translation
+2025-03-16 01:50:49,775 - DEBUG -   Source: repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi (UML)
+2025-03-16 01:50:49,775 - DEBUG -   Target: repo-ecore-all/data/przigoda/model-finder/de.agra.emf.modelfinder.applications.debugging.tests/models/use-models/CarRental2.ecore (Ecore)
+2025-03-16 01:50:49,776 - INFO - === PHASE 3.3: Processing transformation pairs ===
+2025-03-16 01:50:49,777 - INFO - Processing pair 1/5: rental Translation
+2025-03-16 01:50:49,777 - DEBUG - Loading models for pair 1...
+2025-03-16 01:50:49,778 - ERROR - Error processing pair 1: 'ModelSetLoader' object has no attribute 'load_model_with_text'
+Traceback (most recent call last):
+  File "C:\codes\models\token-pair-validation\modelset-integration\phased_debug.py", line 185, in run_basic_experiment_with_embeddings
+    source_model, source_text = loader.load_model_with_text(pair['source'])
+AttributeError: 'ModelSetLoader' object has no attribute 'load_model_with_text'
+2025-03-16 01:50:49,781 - INFO - Processing pair 2/5: rental Translation
+2025-03-16 01:50:49,781 - DEBUG - Loading models for pair 2...
+2025-03-16 01:50:49,781 - ERROR - Error processing pair 2: 'ModelSetLoader' object has no attribute 'load_model_with_text'
+Traceback (most recent call last):
+  File "C:\codes\models\token-pair-validation\modelset-integration\phased_debug.py", line 185, in run_basic_experiment_with_embeddings
+    source_model, source_text = loader.load_model_with_text(pair['source'])
+AttributeError: 'ModelSetLoader' object has no attribute 'load_model_with_text'
+2025-03-16 01:50:49,782 - INFO - Processing pair 3/5: rental Translation
+2025-03-16 01:50:49,783 - DEBUG - Loading models for pair 3...
+2025-03-16 01:50:49,783 - ERROR - Error processing pair 3: 'ModelSetLoader' object has no attribute 'load_model_with_text'
+Traceback (most recent call last):
+  File "C:\codes\models\token-pair-validation\modelset-integration\phased_debug.py", line 185, in run_basic_experiment_with_embeddings
+    source_model, source_text = loader.load_model_with_text(pair['source'])
+AttributeError: 'ModelSetLoader' object has no attribute 'load_model_with_text'
+2025-03-16 01:50:49,784 - INFO - Processing pair 4/5: rental Translation
+2025-03-16 01:50:49,785 - DEBUG - Loading models for pair 4...
+2025-03-16 01:50:49,786 - ERROR - Error processing pair 4: 'ModelSetLoader' object has no attribute 'load_model_with_text'
+Traceback (most recent call last):
+  File "C:\codes\models\token-pair-validation\modelset-integration\phased_debug.py", line 185, in run_basic_experiment_with_embeddings
+    source_model, source_text = loader.load_model_with_text(pair['source'])
+AttributeError: 'ModelSetLoader' object has no attribute 'load_model_with_text'
+2025-03-16 01:50:49,787 - INFO - Processing pair 5/5: rental Translation
+2025-03-16 01:50:49,787 - DEBUG - Loading models for pair 5...
+2025-03-16 01:50:49,788 - ERROR - Error processing pair 5: 'ModelSetLoader' object has no attribute 'load_model_with_text'
+Traceback (most recent call last):
+  File "C:\codes\models\token-pair-validation\modelset-integration\phased_debug.py", line 185, in run_basic_experiment_with_embeddings
+    source_model, source_text = loader.load_model_with_text(pair['source'])
+AttributeError: 'ModelSetLoader' object has no attribute 'load_model_with_text'
+2025-03-16 01:50:49,789 - WARNING - No results to save or visualize
+2025-03-16 01:50:49,789 - INFO - Basic experiment completed in 5.09 seconds
+2025-03-16 01:50:49,806 - INFO - ==== Experiments completed ====
+2025-03-16 01:50:49,806 - INFO - Script execution completed

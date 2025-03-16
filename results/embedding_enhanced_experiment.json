@@ -1,0 +1,117 @@
+[
+  {
+    "pair_name": "rental Translation",
+    "source_id": "repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi",
+    "target_id": "repo-ecore-all/data/artist-project/ARTIST/source/Tooling/migration/application-discovery-understanding/MUT/Component_Viewpoint_MOMoT/org.eclipse.emf.henshin.examples/src/org/eclipse/emf/henshin/examples/ecore2rdb/CarRental.ecore",
+    "regular": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9679848551750183,
+      "transformation_quality": 0.9363886713981628
+    },
+    "enhanced": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9537064641714096,
+      "transformation_quality": 0.9292494758963585
+    },
+    "comparisons": {
+      "direct_embedding_similarity": 0.8407804369926453,
+      "token_pair_similarity": 0.30399999999999994
+    },
+    "applied_rules": [
+      "ClassToEClass"
+    ],
+    "improvement": -0.007139195501804307
+  },
+  {
+    "pair_name": "rental Translation",
+    "source_id": "repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi",
+    "target_id": "repo-ecore-all/data/tue-mdse/ocl-dataset/dataset/repos/MDEGroup/MDEForge/mdeforge/githubmetamodels/rentalSansGmfAnnot.ecore",
+    "regular": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9679848551750183,
+      "transformation_quality": 0.9363886713981628
+    },
+    "enhanced": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9653445959091187,
+      "transformation_quality": 0.935068541765213
+    },
+    "comparisons": {
+      "direct_embedding_similarity": 0.9183679819107056,
+      "token_pair_similarity": 0.30399999999999994
+    },
+    "applied_rules": [
+      "ClassToEClass"
+    ],
+    "improvement": -0.001320129632949807
+  },
+  {
+    "pair_name": "rental Translation",
+    "source_id": "repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi",
+    "target_id": "repo-ecore-all/data/tue-mdse/ocl-dataset/dataset/repos/MDEGroup/MDEForge/mdeforge/githubmetamodels/rental.ecore",
+    "regular": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9679848551750183,
+      "transformation_quality": 0.9363886713981628
+    },
+    "enhanced": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9658739477396011,
+      "transformation_quality": 0.9353332176804543
+    },
+    "comparisons": {
+      "direct_embedding_similarity": 0.9218969941139221,
+      "token_pair_similarity": 0.30399999999999994
+    },
+    "applied_rules": [
+      "ClassToEClass"
+    ],
+    "improvement": -0.0010554537177085432
+  },
+  {
+    "pair_name": "rental Translation",
+    "source_id": "repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi",
+    "target_id": "repo-ecore-all/data/sunwuliang/SlicingProject2.0/ClassModelSlicing/ecores/CarRental.ecore",
+    "regular": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9679848551750183,
+      "transformation_quality": 0.9363886713981628
+    },
+    "enhanced": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.965420413017273,
+      "transformation_quality": 0.9351064503192902
+    },
+    "comparisons": {
+      "direct_embedding_similarity": 0.9188734292984009,
+      "token_pair_similarity": 0.30399999999999994
+    },
+    "applied_rules": [
+      "ClassToEClass"
+    ],
+    "improvement": -0.0012822210788726585
+  },
+  {
+    "pair_name": "rental Translation",
+    "source_id": "repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi",
+    "target_id": "repo-ecore-all/data/przigoda/model-finder/de.agra.emf.modelfinder.applications.debugging.tests/models/use-models/CarRental2.ecore",
+    "regular": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9679848551750183,
+      "transformation_quality": 0.9363886713981628
+    },
+    "enhanced": {
+      "forward_validation": 0.9047924876213074,
+      "backward_validation": 0.9542913377285004,
+      "transformation_quality": 0.9295419126749038
+    },
+    "comparisons": {
+      "direct_embedding_similarity": 0.844679594039917,
+      "token_pair_similarity": 0.30399999999999994
+    },
+    "applied_rules": [
+      "ClassToEClass"
+    ],
+    "improvement": -0.006846758723259017
+  }
+]

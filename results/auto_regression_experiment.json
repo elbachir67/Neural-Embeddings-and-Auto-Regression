@@ -1,0 +1,17 @@
+[
+  {
+    "sequence_type": "uml",
+    "sequence_length": 3,
+    "with_auto_regression": {
+      "forward_validation": 0.9423961937427521,
+      "backward_validation": 0.9573711156845093,
+      "transformation_quality": 0.9461399242281914
+    },
+    "without_auto_regression": {
+      "forward_validation": 0.8822851181030273,
+      "backward_validation": 0.9589892327785492,
+      "transformation_quality": 0.9206371754407883
+    },
+    "improvement": 0.025502748787403107
+  }
+]

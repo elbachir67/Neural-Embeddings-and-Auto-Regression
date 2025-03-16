@@ -1,0 +1,240 @@
+2025-03-16 02:22:21,956 - INFO - Starting embedding experiments script
+2025-03-16 02:22:29,758 - INFO - Successfully imported custom modules
+2025-03-16 02:22:29,758 - INFO - Script called from command line
+2025-03-16 02:22:29,759 - INFO - Parsing arguments...
+2025-03-16 02:22:29,760 - INFO - ================================================================================
+2025-03-16 02:22:29,761 - INFO - Embedding-Enhanced Token Pair Bidirectional Validation
+2025-03-16 02:22:29,761 - INFO - ================================================================================
+2025-03-16 02:22:29,762 - INFO - Arguments: {'modelset': './modelset-dataset', 'output': 'results', 'experiment': 'all', 'domain': None, 'limit': 5}
+2025-03-16 02:22:29,762 - INFO - Creating output directory: results
+2025-03-16 02:22:29,762 - INFO - Creating figures directory: results\figures
+2025-03-16 02:22:29,762 - INFO - Running basic experiment with modelset=./modelset-dataset
+2025-03-16 02:22:29,763 - INFO - 
+Running Embedding-Enhanced Basic Experiment...
+2025-03-16 02:22:29,763 - INFO - Initializing components...
+2025-03-16 02:22:35,568 - INFO - Components initialized
+2025-03-16 02:22:35,568 - INFO - Getting transformation pairs...
+2025-03-16 02:22:35,570 - INFO - Found 5 transformation pairs
+2025-03-16 02:22:35,571 - INFO - 
+Processing pair 1: rental Translation
+2025-03-16 02:22:35,610 - INFO -   Loaded source model: repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi (uml)
+2025-03-16 02:22:35,610 - INFO -   Loaded target model: repo-ecore-all/data/artist-project/ARTIST/source/Tooling/migration/application-discovery-understanding/MUT/Component_Viewpoint_MOMoT/org.eclipse.emf.henshin.examples/src/org/eclipse/emf/henshin/examples/ecore2rdb/CarRental.ecore (ecore)
+2025-03-16 02:22:35,611 - INFO -   Generating embeddings for models...
+2025-03-16 02:22:36,157 - INFO -   Converted source model to 7 token pairs
+2025-03-16 02:22:36,158 - INFO -   Converted target model to 7 token pairs
+2025-03-16 02:22:36,158 - INFO -   Created 1 transformation rules
+2025-03-16 02:22:38,924 - INFO -   Regular Forward Validation: 0.9048
+2025-03-16 02:22:38,924 - INFO -   Regular Backward Validation: 0.9680
+2025-03-16 02:22:38,925 - INFO -   Regular Transformation Quality: 0.9364
+2025-03-16 02:22:38,925 - INFO -   Enhanced Backward Validation: 0.9537
+2025-03-16 02:22:38,925 - INFO -   Enhanced Transformation Quality: 0.9292
+2025-03-16 02:22:39,281 - INFO -   Direct embedding similarity: 0.8408
+2025-03-16 02:22:39,281 - INFO -   Token pair similarity: 0.3040
+2025-03-16 02:22:39,281 - INFO - 
+Processing pair 2: rental Translation
+2025-03-16 02:22:39,286 - INFO -   Loaded source model: repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi (uml)
+2025-03-16 02:22:39,286 - INFO -   Loaded target model: repo-ecore-all/data/tue-mdse/ocl-dataset/dataset/repos/MDEGroup/MDEForge/mdeforge/githubmetamodels/rentalSansGmfAnnot.ecore (ecore)
+2025-03-16 02:22:39,286 - INFO -   Generating embeddings for models...
+2025-03-16 02:22:39,624 - INFO -   Converted source model to 7 token pairs
+2025-03-16 02:22:39,625 - INFO -   Converted target model to 7 token pairs
+2025-03-16 02:22:39,625 - INFO -   Created 1 transformation rules
+2025-03-16 02:22:42,195 - INFO -   Regular Forward Validation: 0.9048
+2025-03-16 02:22:42,196 - INFO -   Regular Backward Validation: 0.9680
+2025-03-16 02:22:42,196 - INFO -   Regular Transformation Quality: 0.9364
+2025-03-16 02:22:42,196 - INFO -   Enhanced Backward Validation: 0.9653
+2025-03-16 02:22:42,196 - INFO -   Enhanced Transformation Quality: 0.9351
+2025-03-16 02:22:42,529 - INFO -   Direct embedding similarity: 0.9184
+2025-03-16 02:22:42,530 - INFO -   Token pair similarity: 0.3040
+2025-03-16 02:22:42,531 - INFO - 
+Processing pair 3: rental Translation
+2025-03-16 02:22:42,536 - INFO -   Loaded source model: repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi (uml)
+2025-03-16 02:22:42,537 - INFO -   Loaded target model: repo-ecore-all/data/tue-mdse/ocl-dataset/dataset/repos/MDEGroup/MDEForge/mdeforge/githubmetamodels/rental.ecore (ecore)
+2025-03-16 02:22:42,537 - INFO -   Generating embeddings for models...
+2025-03-16 02:22:42,875 - INFO -   Converted source model to 7 token pairs
+2025-03-16 02:22:42,876 - INFO -   Converted target model to 7 token pairs
+2025-03-16 02:22:42,876 - INFO -   Created 1 transformation rules
+2025-03-16 02:22:45,412 - INFO -   Regular Forward Validation: 0.9048
+2025-03-16 02:22:45,412 - INFO -   Regular Backward Validation: 0.9680
+2025-03-16 02:22:45,412 - INFO -   Regular Transformation Quality: 0.9364
+2025-03-16 02:22:45,413 - INFO -   Enhanced Backward Validation: 0.9659
+2025-03-16 02:22:45,413 - INFO -   Enhanced Transformation Quality: 0.9353
+2025-03-16 02:22:45,826 - INFO -   Direct embedding similarity: 0.9219
+2025-03-16 02:22:45,828 - INFO -   Token pair similarity: 0.3040
+2025-03-16 02:22:45,828 - INFO - 
+Processing pair 4: rental Translation
+2025-03-16 02:22:45,869 - INFO -   Loaded source model: repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi (uml)
+2025-03-16 02:22:45,870 - INFO -   Loaded target model: repo-ecore-all/data/sunwuliang/SlicingProject2.0/ClassModelSlicing/ecores/CarRental.ecore (ecore)
+2025-03-16 02:22:45,871 - INFO -   Generating embeddings for models...
+2025-03-16 02:22:46,225 - INFO -   Converted source model to 7 token pairs
+2025-03-16 02:22:46,226 - INFO -   Converted target model to 7 token pairs
+2025-03-16 02:22:46,226 - INFO -   Created 1 transformation rules
+2025-03-16 02:22:48,915 - INFO -   Regular Forward Validation: 0.9048
+2025-03-16 02:22:48,916 - INFO -   Regular Backward Validation: 0.9680
+2025-03-16 02:22:48,916 - INFO -   Regular Transformation Quality: 0.9364
+2025-03-16 02:22:48,916 - INFO -   Enhanced Backward Validation: 0.9654
+2025-03-16 02:22:48,917 - INFO -   Enhanced Transformation Quality: 0.9351
+2025-03-16 02:22:49,208 - INFO -   Direct embedding similarity: 0.9189
+2025-03-16 02:22:49,209 - INFO -   Token pair similarity: 0.3040
+2025-03-16 02:22:49,210 - INFO - 
+Processing pair 5: rental Translation
+2025-03-16 02:22:49,212 - INFO -   Loaded source model: repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi (uml)
+2025-03-16 02:22:49,213 - INFO -   Loaded target model: repo-ecore-all/data/przigoda/model-finder/de.agra.emf.modelfinder.applications.debugging.tests/models/use-models/CarRental2.ecore (ecore)
+2025-03-16 02:22:49,213 - INFO -   Generating embeddings for models...
+2025-03-16 02:22:49,584 - INFO -   Converted source model to 7 token pairs
+2025-03-16 02:22:49,585 - INFO -   Converted target model to 7 token pairs
+2025-03-16 02:22:49,586 - INFO -   Created 1 transformation rules
+2025-03-16 02:22:52,304 - INFO -   Regular Forward Validation: 0.9048
+2025-03-16 02:22:52,305 - INFO -   Regular Backward Validation: 0.9680
+2025-03-16 02:22:52,305 - INFO -   Regular Transformation Quality: 0.9364
+2025-03-16 02:22:52,306 - INFO -   Enhanced Backward Validation: 0.9543
+2025-03-16 02:22:52,306 - INFO -   Enhanced Transformation Quality: 0.9295
+2025-03-16 02:22:52,626 - INFO -   Direct embedding similarity: 0.8447
+2025-03-16 02:22:52,627 - INFO -   Token pair similarity: 0.3040
+2025-03-16 02:22:52,631 - INFO - Results saved to results\embedding_enhanced_experiment.json
+2025-03-16 02:22:53,241 - INFO - Quality comparison chart saved to results\figures\quality_comparison.png
+2025-03-16 02:22:53,421 - INFO - Running comparison experiment with modelset=./modelset-dataset
+2025-03-16 02:22:53,422 - INFO - 
+Running Detailed Comparison Experiment...
+2025-03-16 02:22:53,423 - INFO - Initializing components...
+2025-03-16 02:22:57,277 - INFO - Components initialized
+2025-03-16 02:22:57,277 - INFO - Getting transformation pairs...
+2025-03-16 02:22:57,281 - INFO - Found 10 transformation pairs (5 translation, 5 revision)
+2025-03-16 02:22:57,282 - INFO - 
+Processing pair 1: rental Translation (translation)
+2025-03-16 02:22:57,284 - INFO -   Loaded source model: repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi (uml)
+2025-03-16 02:22:57,285 - INFO -   Loaded target model: repo-ecore-all/data/artist-project/ARTIST/source/Tooling/migration/application-discovery-understanding/MUT/Component_Viewpoint_MOMoT/org.eclipse.emf.henshin.examples/src/org/eclipse/emf/henshin/examples/ecore2rdb/CarRental.ecore (ecore)
+2025-03-16 02:22:57,286 - INFO -   Generating embeddings for models...
+2025-03-16 02:22:58,046 - INFO -   Direct embedding similarity: 0.8408
+2025-03-16 02:22:58,047 - INFO -   Created 1 transformation rules
+2025-03-16 02:23:00,786 - INFO -   Regular Forward Validation: 0.9048
+2025-03-16 02:23:00,787 - INFO -   Regular Backward Validation: 0.9680
+2025-03-16 02:23:00,787 - INFO -   Regular Transformation Quality: 0.9364
+2025-03-16 02:23:00,787 - INFO -   Enhanced Backward Validation: 0.9537
+2025-03-16 02:23:00,789 - INFO -   Enhanced Transformation Quality: 0.9292
+2025-03-16 02:23:00,789 - INFO -   Improvement: -0.71%
+2025-03-16 02:23:00,790 - INFO - 
+Processing pair 2: rental Translation (translation)
+2025-03-16 02:23:00,792 - INFO -   Loaded source model: repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi (uml)
+2025-03-16 02:23:00,792 - INFO -   Loaded target model: repo-ecore-all/data/tue-mdse/ocl-dataset/dataset/repos/MDEGroup/MDEForge/mdeforge/githubmetamodels/rentalSansGmfAnnot.ecore (ecore)
+2025-03-16 02:23:00,793 - INFO -   Generating embeddings for models...
+2025-03-16 02:23:01,395 - INFO -   Direct embedding similarity: 0.9184
+2025-03-16 02:23:01,396 - INFO -   Created 1 transformation rules
+2025-03-16 02:23:03,997 - INFO -   Regular Forward Validation: 0.9048
+2025-03-16 02:23:03,998 - INFO -   Regular Backward Validation: 0.9680
+2025-03-16 02:23:03,998 - INFO -   Regular Transformation Quality: 0.9364
+2025-03-16 02:23:03,998 - INFO -   Enhanced Backward Validation: 0.9653
+2025-03-16 02:23:03,999 - INFO -   Enhanced Transformation Quality: 0.9351
+2025-03-16 02:23:03,999 - INFO -   Improvement: -0.13%
+2025-03-16 02:23:04,000 - INFO - 
+Processing pair 3: rental Translation (translation)
+2025-03-16 02:23:04,003 - INFO -   Loaded source model: repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi (uml)
+2025-03-16 02:23:04,004 - INFO -   Loaded target model: repo-ecore-all/data/tue-mdse/ocl-dataset/dataset/repos/MDEGroup/MDEForge/mdeforge/githubmetamodels/rental.ecore (ecore)
+2025-03-16 02:23:04,004 - INFO -   Generating embeddings for models...
+2025-03-16 02:23:04,669 - INFO -   Direct embedding similarity: 0.9219
+2025-03-16 02:23:04,670 - INFO -   Created 1 transformation rules
+2025-03-16 02:23:07,239 - INFO -   Regular Forward Validation: 0.9048
+2025-03-16 02:23:07,240 - INFO -   Regular Backward Validation: 0.9680
+2025-03-16 02:23:07,240 - INFO -   Regular Transformation Quality: 0.9364
+2025-03-16 02:23:07,241 - INFO -   Enhanced Backward Validation: 0.9659
+2025-03-16 02:23:07,241 - INFO -   Enhanced Transformation Quality: 0.9353
+2025-03-16 02:23:07,241 - INFO -   Improvement: -0.11%
+2025-03-16 02:23:07,242 - INFO - 
+Processing pair 4: rental Translation (translation)
+2025-03-16 02:23:07,244 - INFO -   Loaded source model: repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi (uml)
+2025-03-16 02:23:07,244 - INFO -   Loaded target model: repo-ecore-all/data/sunwuliang/SlicingProject2.0/ClassModelSlicing/ecores/CarRental.ecore (ecore)
+2025-03-16 02:23:07,245 - INFO -   Generating embeddings for models...
+2025-03-16 02:23:07,860 - INFO -   Direct embedding similarity: 0.9189
+2025-03-16 02:23:07,901 - INFO -   Created 1 transformation rules
+2025-03-16 02:23:10,521 - INFO -   Regular Forward Validation: 0.9048
+2025-03-16 02:23:10,522 - INFO -   Regular Backward Validation: 0.9680
+2025-03-16 02:23:10,524 - INFO -   Regular Transformation Quality: 0.9364
+2025-03-16 02:23:10,524 - INFO -   Enhanced Backward Validation: 0.9654
+2025-03-16 02:23:10,524 - INFO -   Enhanced Transformation Quality: 0.9351
+2025-03-16 02:23:10,525 - INFO -   Improvement: -0.13%
+2025-03-16 02:23:10,525 - INFO - 
+Processing pair 5: rental Translation (translation)
+2025-03-16 02:23:10,527 - INFO -   Loaded source model: repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi (uml)
+2025-03-16 02:23:10,527 - INFO -   Loaded target model: repo-ecore-all/data/przigoda/model-finder/de.agra.emf.modelfinder.applications.debugging.tests/models/use-models/CarRental2.ecore (ecore)
+2025-03-16 02:23:10,527 - INFO -   Generating embeddings for models...
+2025-03-16 02:23:11,167 - INFO -   Direct embedding similarity: 0.8447
+2025-03-16 02:23:11,168 - INFO -   Created 1 transformation rules
+2025-03-16 02:23:13,757 - INFO -   Regular Forward Validation: 0.9048
+2025-03-16 02:23:13,758 - INFO -   Regular Backward Validation: 0.9680
+2025-03-16 02:23:13,758 - INFO -   Regular Transformation Quality: 0.9364
+2025-03-16 02:23:13,758 - INFO -   Enhanced Backward Validation: 0.9543
+2025-03-16 02:23:13,758 - INFO -   Enhanced Transformation Quality: 0.9295
+2025-03-16 02:23:13,759 - INFO -   Improvement: -0.68%
+2025-03-16 02:23:13,759 - INFO - 
+Processing pair 6: travel Revision (revision)
+2025-03-16 02:23:13,761 - INFO -   Loaded source model: repo-genmymodel-uml/data/64d73a9a-d42d-4090-b6ce-9496e444dcf0.xmi (uml)
+2025-03-16 02:23:13,761 - INFO -   Loaded target model: repo-genmymodel-uml/data/81785248-09b5-44cc-8994-1cd0c8b6a645.xmi (uml)
+2025-03-16 02:23:13,762 - INFO -   Generating embeddings for models...
+2025-03-16 02:23:15,936 - INFO -   Direct embedding similarity: 0.9538
+2025-03-16 02:23:15,938 - INFO -   Created 3 transformation rules
+2025-03-16 02:23:18,826 - INFO -   Regular Forward Validation: 0.9411
+2025-03-16 02:23:18,826 - INFO -   Regular Backward Validation: 0.9578
+2025-03-16 02:23:18,827 - INFO -   Regular Transformation Quality: 0.9453
+2025-03-16 02:23:18,827 - INFO -   Enhanced Backward Validation: 0.9635
+2025-03-16 02:23:18,828 - INFO -   Enhanced Transformation Quality: 0.9467
+2025-03-16 02:23:18,828 - INFO -   Improvement: 0.14%
+2025-03-16 02:23:18,828 - INFO - 
+Processing pair 7: travel Revision (revision)
+2025-03-16 02:23:18,831 - INFO -   Loaded source model: repo-genmymodel-uml/data/81785248-09b5-44cc-8994-1cd0c8b6a645.xmi (uml)
+2025-03-16 02:23:18,832 - INFO -   Loaded target model: repo-genmymodel-uml/data/b1c6694b-7781-427b-a027-669a32b60e35.xmi (uml)
+2025-03-16 02:23:18,832 - INFO -   Generating embeddings for models...
+2025-03-16 02:23:20,606 - INFO -   Direct embedding similarity: 0.9380
+2025-03-16 02:23:20,607 - INFO -   Created 3 transformation rules
+2025-03-16 02:23:24,758 - INFO -   Regular Forward Validation: 0.9385
+2025-03-16 02:23:24,759 - INFO -   Regular Backward Validation: 0.8938
+2025-03-16 02:23:24,759 - INFO -   Regular Transformation Quality: 0.9274
+2025-03-16 02:23:24,761 - INFO -   Enhanced Backward Validation: 0.9164
+2025-03-16 02:23:24,761 - INFO -   Enhanced Transformation Quality: 0.9330
+2025-03-16 02:23:24,761 - INFO -   Improvement: 0.56%
+2025-03-16 02:23:24,762 - INFO - 
+Processing pair 8: travel Revision (revision)
+2025-03-16 02:23:24,764 - INFO -   Loaded source model: repo-genmymodel-uml/data/b1c6694b-7781-427b-a027-669a32b60e35.xmi (uml)
+2025-03-16 02:23:24,764 - INFO -   Loaded target model: repo-genmymodel-uml/data/3286a981-cc46-400c-bdf7-8f24285a8ca3.xmi (uml)
+2025-03-16 02:23:24,765 - INFO -   Generating embeddings for models...
+2025-03-16 02:23:25,976 - INFO -   Direct embedding similarity: 0.8711
+2025-03-16 02:23:25,977 - INFO -   Created 3 transformation rules
+2025-03-16 02:23:28,731 - INFO -   Regular Forward Validation: 0.9406
+2025-03-16 02:23:28,732 - INFO -   Regular Backward Validation: 0.9584
+2025-03-16 02:23:28,732 - INFO -   Regular Transformation Quality: 0.9450
+2025-03-16 02:23:28,733 - INFO -   Enhanced Backward Validation: 0.9516
+2025-03-16 02:23:28,733 - INFO -   Enhanced Transformation Quality: 0.9433
+2025-03-16 02:23:28,734 - INFO -   Improvement: -0.17%
+2025-03-16 02:23:28,734 - INFO - 
+Processing pair 9: travel Revision (revision)
+2025-03-16 02:23:28,737 - INFO -   Loaded source model: repo-genmymodel-uml/data/3286a981-cc46-400c-bdf7-8f24285a8ca3.xmi (uml)
+2025-03-16 02:23:28,737 - INFO -   Loaded target model: repo-genmymodel-uml/data/21dc1a19-77da-4bec-a72a-c5e20fbef990.xmi (uml)
+2025-03-16 02:23:28,738 - INFO -   Generating embeddings for models...
+2025-03-16 02:23:30,831 - INFO -   Direct embedding similarity: 0.8757
+2025-03-16 02:23:30,832 - INFO -   Created 3 transformation rules
+2025-03-16 02:23:33,576 - INFO -   Regular Forward Validation: 0.9419
+2025-03-16 02:23:33,577 - INFO -   Regular Backward Validation: 0.9565
+2025-03-16 02:23:33,578 - INFO -   Regular Transformation Quality: 0.9455
+2025-03-16 02:23:33,578 - INFO -   Enhanced Backward Validation: 0.9509
+2025-03-16 02:23:33,579 - INFO -   Enhanced Transformation Quality: 0.9441
+2025-03-16 02:23:33,579 - INFO -   Improvement: -0.14%
+2025-03-16 02:23:33,579 - INFO - 
+Processing pair 10: travel Revision (revision)
+2025-03-16 02:23:33,582 - INFO -   Loaded source model: repo-genmymodel-uml/data/21dc1a19-77da-4bec-a72a-c5e20fbef990.xmi (uml)
+2025-03-16 02:23:33,584 - INFO -   Loaded target model: repo-genmymodel-uml/data/c048477c-aa54-473d-9b08-2884b6cfc772.xmi (uml)
+2025-03-16 02:23:33,584 - INFO -   Generating embeddings for models...
+2025-03-16 02:23:35,767 - INFO -   Direct embedding similarity: 0.9896
+2025-03-16 02:23:35,768 - INFO -   Created 3 transformation rules
+2025-03-16 02:23:39,996 - INFO -   Regular Forward Validation: 0.9381
+2025-03-16 02:23:39,997 - INFO -   Regular Backward Validation: 0.8929
+2025-03-16 02:23:39,998 - INFO -   Regular Transformation Quality: 0.9268
+2025-03-16 02:23:39,998 - INFO -   Enhanced Backward Validation: 0.9235
+2025-03-16 02:23:39,999 - INFO -   Enhanced Transformation Quality: 0.9344
+2025-03-16 02:23:39,999 - INFO -   Improvement: 0.76%
+2025-03-16 02:23:40,006 - INFO - Results saved to results\detailed_comparison.json
+2025-03-16 02:23:40,703 - INFO - Type comparison chart saved to results\figures\type_comparison.png
+2025-03-16 02:23:40,886 - INFO - 
+================================================================================
+2025-03-16 02:23:40,887 - INFO - Experiments complete! Results saved in results
+2025-03-16 02:23:40,887 - INFO - ================================================================================
+2025-03-16 02:23:40,888 - INFO - Figures saved in results\figures
+2025-03-16 02:23:40,888 - INFO - ================================================================================
+2025-03-16 02:23:40,889 - INFO - Script execution completed
