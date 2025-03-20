@@ -67,97 +67,23 @@ class EmbeddingGenerator:
             embedding_size = self.model.config.hidden_size
             return np.zeros(embedding_size)
     
-    def generate_token_pair_embedding(self, token_pair, model_text=None):
+    def compute_similarity(self, text1, text2):
         """
-        Generate embedding specific to a token pair
+        Compute semantic similarity between two texts
         
         Args:
-            token_pair: Token pair dictionary
-            model_text: Text representation of the model (optional)
+            text1: First text
+            text2: Second text
             
         Returns:
-            Embedding vector specific to this token pair
+            Similarity score between -1 and 1
         """
-        # Get element information
-        element_type = token_pair['element']['type']
-        element_id = token_pair['element']['id']
+        embedding1 = self.generate_embedding(text1)
+        embedding2 = self.generate_embedding(text2)
         
-        # Use element-specific text if available
-        if 'element_context' in token_pair and 'text' in token_pair['element_context']:
-            element_text = token_pair['element_context']['text']
-        else:
-            # Create a text representation based on token pair properties
-            element_text = f"Element of type {element_type} with id {element_id}."
-        
-        # Create token pair specific text description
-        pair_text = f"Token pair: {element_text} "
-        
-        # Add meta-element information
-        if 'meta_element' in token_pair:
-            pair_text += f"Meta-element type: {token_pair['meta_element']['type']}. "
-            
-            # Add constraints
-            constraints = token_pair['meta_element'].get('constraints', [])
-            if constraints:
-                pair_text += f"Constraints: {', '.join(constraints)}. "
-        
-        # Add relationship information if available
-        if 'pair_context' in token_pair and 'relations' in token_pair['pair_context']:
-            relations = token_pair['pair_context']['relations']
-            if relations:
-                pair_text += "Relationships: "
-                for idx, rel in enumerate(relations[:3]):  # Limit to first 3 relationships
-                    if rel['type'] == 'outgoing':
-                        pair_text += f"connects to {rel['target_type']} via {rel['edge_type']}"
-                    else:
-                        pair_text += f"connected from {rel['source_type']} via {rel['edge_type']}"
-                        
-                    if idx < min(2, len(relations) - 1):
-                        pair_text += ", "
-        
-        # Generate embedding for this specific token pair text
-        return self.generate_embedding(pair_text)
-    
-    def generate_token_pair_embeddings(self, token_pairs):
-        """
-        Generate embeddings for a list of token pairs
-        
-        Args:
-            token_pairs: List of token pair dictionaries
-            
-        Returns:
-            Updated token pairs with embeddings
-        """
-        updated_pairs = []
-        
-        for pair in token_pairs:
-            # Generate pair-specific embedding
-            pair_embedding = self.generate_token_pair_embedding(pair)
-            
-            # Add the embedding to the token pair
-            pair_copy = pair.copy()
-            pair_copy['embedding'] = pair_embedding
-            updated_pairs.append(pair_copy)
-        
-        return updated_pairs
-    
-        def compute_similarity(self, text1, text2):
-            """
-            Compute semantic similarity between two texts
-            
-            Args:
-                text1: First text
-                text2: Second text
-                
-            Returns:
-                Similarity score between -1 and 1
-            """
-            embedding1 = self.generate_embedding(text1)
-            embedding2 = self.generate_embedding(text2)
-            
-            # Compute cosine similarity
-            similarity = self._cosine_similarity(embedding1, embedding2)
-            return similarity
+        # Compute cosine similarity
+        similarity = self._cosine_similarity(embedding1, embedding2)
+        return similarity
     
     def _cosine_similarity(self, vec1, vec2):
         """
@@ -173,37 +99,6 @@ class EmbeddingGenerator:
         vec1 = vec1.reshape(1, -1)
         vec2 = vec2.reshape(1, -1)
         return cosine_similarity(vec1, vec2)[0][0]
-    
-    def compute_token_pair_similarity(self, source_pairs, target_pairs):
-        """
-        Compute similarity between token pairs using their embeddings
-        
-        Args:
-            source_pairs: List of token pairs from source model with embeddings
-            target_pairs: List of token pairs from target model with embeddings
-            
-        Returns:
-            Similarity score between 0 and 1
-        """
-        # First, ensure all pairs have embeddings
-        for pairs in [source_pairs, target_pairs]:
-            for pair in pairs:
-                if 'embedding' not in pair:
-                    pair['embedding'] = self.generate_token_pair_embedding(pair)
-        
-        # Compute similarity matrix between all pairs
-        similarities = []
-        for s_pair in source_pairs:
-            for t_pair in target_pairs:
-                sim = self._cosine_similarity(s_pair['embedding'], t_pair['embedding'])
-                # Normalize to [0, 1]
-                sim = (sim + 1) / 2
-                similarities.append(sim)
-        
-        # Return average similarity
-        if similarities:
-            return sum(similarities) / len(similarities)
-        return 0.0
     
     def analyze_text_embeddings(self, texts, labels=None, output_path=None):
         """

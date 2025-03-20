@@ -114,10 +114,10 @@ The key findings of our paper can be reproduced by following these steps:
 If you use this code in your research, please cite our paper:
 
 ```bibtex
-@inproceedings{bidirectional2025,
+@inproceedings{toure2025bidirectional,
   title={Towards Bidirectional Semantic Validation in Model Transformations Using Neural Embeddings and Token Pairs},
-  author={},
-  booktitle={Proceedings of the International ...},
+  author={Toure, El Hadji Bassirou and [Other Authors]},
+  booktitle={Proceedings of the International Conference on Model-Driven Engineering},
   year={2025},
   organization={IEEE}
 }
@@ -125,4 +125,4 @@ If you use this code in your research, please cite our paper:
 
 ## Contact
 
-For questions or issues, please contact [ballbass67@gmail.com](mailto:ballbass67@gmail.com).
+For questions or issues, please contact [elhadjibassirou.toure@ucad.edu.sn](mailto:elhadjibassirou.toure@ucad.edu.sn).

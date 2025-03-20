@@ -1,7 +1,0 @@
-2025-03-16 01:46:19,968 - INFO - Starting embedding experiments script
-2025-03-16 01:46:20,441 - DEBUG - matplotlib data path: C:\Users\Lenovo\anaconda3\envs\cs160\lib\site-packages\matplotlib\mpl-data
-2025-03-16 01:46:20,447 - DEBUG - CONFIGDIR=C:\Users\Lenovo\.matplotlib
-2025-03-16 01:46:20,450 - DEBUG - interactive is False
-2025-03-16 01:46:20,450 - DEBUG - platform is win32
-2025-03-16 01:46:20,541 - DEBUG - CACHEDIR=C:\Users\Lenovo\.matplotlib
-2025-03-16 01:46:20,545 - DEBUG - Using fontManager instance from C:\Users\Lenovo\.matplotlib\fontlist-v330.json

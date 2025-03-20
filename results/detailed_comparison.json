@@ -1,105 +1,105 @@
 [
   {
-    "pair_name": "rental Translation",
+    "pair_name": "library Translation",
     "pair_type": "translation",
-    "source_id": "repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi",
-    "target_id": "repo-ecore-all/data/artist-project/ARTIST/source/Tooling/migration/application-discovery-understanding/MUT/Component_Viewpoint_MOMoT/org.eclipse.emf.henshin.examples/src/org/eclipse/emf/henshin/examples/ecore2rdb/CarRental.ecore",
-    "direct_embedding_similarity": 0.8407804369926453,
+    "source_id": "repo-genmymodel-uml/data/b7b2f9c0-eada-4d61-996c-65d45706e3f2.xmi",
+    "target_id": "repo-ecore-all/data/PSI-Polska/teneo/hibernate/org.eclipse.emf.teneo.hibernate.examples/model/extlibrary.ecore",
+    "direct_embedding_similarity": 0.9224753379821777,
     "regular": {
-      "forward_validation": 0.9047924876213074,
-      "backward_validation": 0.9679848551750183,
-      "transformation_quality": 0.9363886713981628
+      "forward_validation": 0.905266523361206,
+      "backward_validation": 0.9747551381587982,
+      "transformation_quality": 0.9400108307600021
     },
     "enhanced": {
-      "forward_validation": 0.9047924876213074,
-      "backward_validation": 0.9537064641714096,
-      "transformation_quality": 0.9292494758963585
+      "forward_validation": 0.905266523361206,
+      "backward_validation": 0.9706998974084855,
+      "transformation_quality": 0.9379832103848458
     },
-    "improvement": -0.007139195501804307,
+    "improvement": -0.002027620375156358,
     "applied_rules": [
       "ClassToEClass"
     ]
   },
   {
-    "pair_name": "rental Translation",
+    "pair_name": "library Translation",
     "pair_type": "translation",
-    "source_id": "repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi",
-    "target_id": "repo-ecore-all/data/tue-mdse/ocl-dataset/dataset/repos/MDEGroup/MDEForge/mdeforge/githubmetamodels/rentalSansGmfAnnot.ecore",
-    "direct_embedding_similarity": 0.9183679819107056,
+    "source_id": "repo-genmymodel-uml/data/b7b2f9c0-eada-4d61-996c-65d45706e3f2.xmi",
+    "target_id": "repo-ecore-all/data/eclipse/emf.compare/plugins/org.eclipse.emf.compare.rcp.ui.tests/src/org/eclipse/emf/compare/rcp/ui/tests/contentmergeviewer/accessor/match/data/right.ecore",
+    "direct_embedding_similarity": 0.8726084232330322,
     "regular": {
-      "forward_validation": 0.9047924876213074,
-      "backward_validation": 0.9679848551750183,
-      "transformation_quality": 0.9363886713981628
+      "forward_validation": 0.905266523361206,
+      "backward_validation": 0.9747551381587982,
+      "transformation_quality": 0.9400108307600021
     },
     "enhanced": {
-      "forward_validation": 0.9047924876213074,
-      "backward_validation": 0.9653445959091187,
-      "transformation_quality": 0.935068541765213
+      "forward_validation": 0.905266523361206,
+      "backward_validation": 0.9632198601961136,
+      "transformation_quality": 0.9342431917786598
     },
-    "improvement": -0.001320129632949807,
+    "improvement": -0.00576763898134236,
     "applied_rules": [
       "ClassToEClass"
     ]
   },
   {
-    "pair_name": "rental Translation",
+    "pair_name": "library Translation",
     "pair_type": "translation",
-    "source_id": "repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi",
-    "target_id": "repo-ecore-all/data/tue-mdse/ocl-dataset/dataset/repos/MDEGroup/MDEForge/mdeforge/githubmetamodels/rental.ecore",
-    "direct_embedding_similarity": 0.9218969941139221,
+    "source_id": "repo-genmymodel-uml/data/b7b2f9c0-eada-4d61-996c-65d45706e3f2.xmi",
+    "target_id": "repo-ecore-all/data/Vinayakatk/FormSection/my.generator.project/src/metamodel/Library.ecore",
+    "direct_embedding_similarity": 0.8832665681838989,
     "regular": {
-      "forward_validation": 0.9047924876213074,
-      "backward_validation": 0.9679848551750183,
-      "transformation_quality": 0.9363886713981628
+      "forward_validation": 0.905266523361206,
+      "backward_validation": 0.9747551381587982,
+      "transformation_quality": 0.9400108307600021
     },
     "enhanced": {
-      "forward_validation": 0.9047924876213074,
-      "backward_validation": 0.9658739477396011,
-      "transformation_quality": 0.9353332176804543
+      "forward_validation": 0.905266523361206,
+      "backward_validation": 0.9648185819387436,
+      "transformation_quality": 0.9350425526499748
     },
-    "improvement": -0.0010554537177085432,
+    "improvement": -0.004968278110027313,
     "applied_rules": [
       "ClassToEClass"
     ]
   },
   {
-    "pair_name": "rental Translation",
+    "pair_name": "library Translation",
     "pair_type": "translation",
-    "source_id": "repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi",
-    "target_id": "repo-ecore-all/data/sunwuliang/SlicingProject2.0/ClassModelSlicing/ecores/CarRental.ecore",
-    "direct_embedding_similarity": 0.9188734292984009,
+    "source_id": "repo-genmymodel-uml/data/b7b2f9c0-eada-4d61-996c-65d45706e3f2.xmi",
+    "target_id": "repo-ecore-all/data/tue-mdse/ocl-dataset/dataset/repos/MDEGroup/MDEForge/mdeforge/githubmetamodels/Copy of library.ecore",
+    "direct_embedding_similarity": 0.9130846261978149,
     "regular": {
-      "forward_validation": 0.9047924876213074,
-      "backward_validation": 0.9679848551750183,
-      "transformation_quality": 0.9363886713981628
+      "forward_validation": 0.905266523361206,
+      "backward_validation": 0.9747551381587982,
+      "transformation_quality": 0.9400108307600021
     },
     "enhanced": {
-      "forward_validation": 0.9047924876213074,
-      "backward_validation": 0.965420413017273,
-      "transformation_quality": 0.9351064503192902
+      "forward_validation": 0.905266523361206,
+      "backward_validation": 0.9692912906408311,
+      "transformation_quality": 0.9372789070010186
     },
-    "improvement": -0.0012822210788726585,
+    "improvement": -0.0027319237589835677,
     "applied_rules": [
       "ClassToEClass"
     ]
   },
   {
-    "pair_name": "rental Translation",
+    "pair_name": "library Translation",
     "pair_type": "translation",
-    "source_id": "repo-genmymodel-uml/data/9b2e0b1c-0754-4ee7-9953-c866f5cd32a6.xmi",
-    "target_id": "repo-ecore-all/data/przigoda/model-finder/de.agra.emf.modelfinder.applications.debugging.tests/models/use-models/CarRental2.ecore",
-    "direct_embedding_similarity": 0.844679594039917,
+    "source_id": "repo-genmymodel-uml/data/b7b2f9c0-eada-4d61-996c-65d45706e3f2.xmi",
+    "target_id": "repo-ecore-all/data/shresthap/clubuml2013/trunk/Display Diagram/Upload_And_Display_UML/WebContent/test_ecore/library.ecore",
+    "direct_embedding_similarity": 0.8838703632354736,
     "regular": {
-      "forward_validation": 0.9047924876213074,
-      "backward_validation": 0.9679848551750183,
-      "transformation_quality": 0.9363886713981628
+      "forward_validation": 0.905266523361206,
+      "backward_validation": 0.9747551381587982,
+      "transformation_quality": 0.9400108307600021
     },
     "enhanced": {
-      "forward_validation": 0.9047924876213074,
-      "backward_validation": 0.9542913377285004,
-      "transformation_quality": 0.9295419126749038
+      "forward_validation": 0.905266523361206,
+      "backward_validation": 0.9649091511964798,
+      "transformation_quality": 0.9350878372788429
     },
-    "improvement": -0.006846758723259017,
+    "improvement": -0.00492299348115921,
     "applied_rules": [
       "ClassToEClass"
     ]
