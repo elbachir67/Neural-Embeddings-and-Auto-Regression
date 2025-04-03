@@ -115,7 +115,7 @@ If you use this code in your research, please cite our paper:
 
 ```bibtex
 @inproceedings{bidirectional2025,
-  title={Intent-Aware Semantic Validation of Model Transformations Using Neural Embeddings},
+  title={Neural Embeddings + Auto Regression for Model Transformation},
   author={},
   booktitle={Proceedings of the International ...},
   year={2025},
