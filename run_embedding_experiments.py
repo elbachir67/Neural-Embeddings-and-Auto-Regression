@@ -561,7 +561,7 @@ def visualize_embedding_results(results, output_dir):
     except Exception as e:
         logging.error(f"Error visualizing results: {str(e)}", exc_info=True)
 
-def run_comparison_experiment(modelset_path, output_dir, domain=None, limit=3):
+def run_comparison_experiment(modelset_path, output_dir, domain=None, limit=5):
     """Run a detailed comparison between regular and embedding-enhanced approaches"""
     logging.info("\nRunning Detailed Comparison Experiment...")
     
@@ -570,12 +570,11 @@ def run_comparison_experiment(modelset_path, output_dir, domain=None, limit=3):
     
     try:
         # Initialize components
-        logging.info("Initializing components...")
+        logging.info("Initializing components with optimized parameters...")
         loader = ModelSetLoader(modelset_path)
         adapter = TokenPairAdapter()
         encoder = ContextEncoder()
         validator = BidirectionalValidator(encoder)
-        transformer = IntentAwareTransformer(encoder, validator)
         embedding_generator = EmbeddingGenerator()
         logging.info("Components initialized")
     except Exception as e:
@@ -601,7 +600,7 @@ def run_comparison_experiment(modelset_path, output_dir, domain=None, limit=3):
     
     results = []
     
-    # Process each pair
+    # Process each pair with optimized parameters
     for pair_index, pair in enumerate(all_pairs):
         logging.info(f"\nProcessing pair {pair_index+1}: {pair['name']} ({pair['type']})")
         
@@ -622,68 +621,51 @@ def run_comparison_experiment(modelset_path, output_dir, domain=None, limit=3):
             source_embedding = embedding_generator.generate_embedding(source_text)
             target_embedding = embedding_generator.generate_embedding(target_text)
             
-            # Direct embedding similarity
-            direct_similarity = embedding_generator.compute_similarity(source_text, target_text)
-            logging.info(f"  Direct embedding similarity: {direct_similarity:.4f}")
-            
             # Create transformation rules
             rules = adapter.create_transformation_rules(source_model, target_model, pair['type'])
             
-            # Add rules to transformer
-            transformer.rules_library = []  # Clear previous rules
-            for rule in rules:
-                transformer.add_rule(rule)
-            
-            logging.info(f"  Created {len(rules)} transformation rules")
-            
-            # Transform with validation - regular approach
-            transformed_model, applied_rules, validation_scores = transformer.transform_with_validation(
-                source_model, intent=pair['type'], max_rules=len(rules)
+            # Use enhanced computation with optimized parameters
+            result = validator.compute_enhanced_transformation_quality(
+                source_model, 
+                target_model, 
+                rules, 
+                source_embedding, 
+                target_embedding, 
+                pair['type']
             )
             
-            # Get regular validation scores
-            final_scores = validation_scores[-1] if validation_scores else {
-                'forward_validation_score': 0,
-                'backward_validation_score': 0,
-                'transformation_quality': 0
-            }
+            logging.info(f"  Intent: {pair['type'].upper()}")
+            logging.info(f"  Parameters: α={result['alpha']:.1f}, β={result['beta']:.1f}")
+            logging.info(f"  Forward Validation: {result['forward_validation_score']:.4f}")
+            logging.info(f"  Standard Backward Validation: {result['standard_backward_validation_score']:.4f}")
+            logging.info(f"  Enhanced Backward Validation: {result['enhanced_backward_validation_score']:.4f}")
+            logging.info(f"  Standard Quality: {result['standard_transformation_quality']:.4f}")
+            logging.info(f"  Enhanced Quality: {result['enhanced_transformation_quality']:.4f}")
+            logging.info(f"  Improvement: {result['improvement']*100:.2f}%")
             
-            # Compute embedding-enhanced backward validation
-            enhanced_backward_validation = validator.compute_backward_validation_score_with_embeddings(
-                source_model, transformed_model, source_embedding, target_embedding
-            )
-            
-            # Compute enhanced transformation quality
-            alpha = 0.75 if pair['type'] == 'revision' else 0.5
-            enhanced_quality = alpha * final_scores['forward_validation_score'] + (1 - alpha) * enhanced_backward_validation
-            
-            logging.info(f"  Regular Forward Validation: {final_scores['forward_validation_score']:.4f}")
-            logging.info(f"  Regular Backward Validation: {final_scores['backward_validation_score']:.4f}")
-            logging.info(f"  Regular Transformation Quality: {final_scores['transformation_quality']:.4f}")
-            logging.info(f"  Enhanced Backward Validation: {enhanced_backward_validation:.4f}")
-            logging.info(f"  Enhanced Transformation Quality: {enhanced_quality:.4f}")
-            logging.info(f"  Improvement: {(enhanced_quality - final_scores['transformation_quality'])*100:.2f}%")
-            
-            # Store results
-            results.append({
+            # Store result with pair info
+            pair_result = {
                 'pair_name': pair['name'],
                 'pair_type': pair['type'],
                 'source_id': pair['source']['id'],
                 'target_id': pair['target']['id'],
-                'direct_embedding_similarity': float(direct_similarity),
+                'direct_embedding_similarity': float(result['embedding_similarity']),
+                'alpha': float(result['alpha']),
+                'beta': float(result['beta']),
                 'regular': {
-                    'forward_validation': float(final_scores['forward_validation_score']),
-                    'backward_validation': float(final_scores['backward_validation_score']),
-                    'transformation_quality': float(final_scores['transformation_quality'])
+                    'forward_validation': float(result['forward_validation_score']),
+                    'backward_validation': float(result['standard_backward_validation_score']),
+                    'transformation_quality': float(result['standard_transformation_quality'])
                 },
                 'enhanced': {
-                    'forward_validation': float(final_scores['forward_validation_score']),
-                    'backward_validation': float(enhanced_backward_validation),
-                    'transformation_quality': float(enhanced_quality)
+                    'forward_validation': float(result['forward_validation_score']),
+                    'backward_validation': float(result['enhanced_backward_validation_score']),
+                    'transformation_quality': float(result['enhanced_transformation_quality'])
                 },
-                'improvement': float(enhanced_quality - final_scores['transformation_quality']),
-                'applied_rules': [rule.id for rule in applied_rules]
-            })
+                'improvement': float(result['improvement'])
+            }
+            
+            results.append(pair_result)
             
         except Exception as e:
             logging.error(f"  Error processing pair: {str(e)}", exc_info=True)
@@ -693,9 +675,9 @@ def run_comparison_experiment(modelset_path, output_dir, domain=None, limit=3):
     try:
         if results:
             # Save JSON results
-            with open(os.path.join(output_dir, 'detailed_comparison.json'), 'w') as f:
+            with open(os.path.join(output_dir, 'detailed_comparison_optimized.json'), 'w') as f:
                 json.dump(results, f, indent=2)
-            logging.info(f"Results saved to {os.path.join(output_dir, 'detailed_comparison.json')}")
+            logging.info(f"Results saved to {os.path.join(output_dir, 'detailed_comparison_optimized.json')}")
             
             # Create detailed visualization
             visualize_detailed_comparison(results, output_dir)
@@ -706,63 +688,63 @@ def run_comparison_experiment(modelset_path, output_dir, domain=None, limit=3):
     
     return results
 
-def visualize_detailed_comparison(results, output_dir):
-    """Create a detailed visualization comparing approaches by transformation type"""
-    try:
-        if not results:
-            logging.warning("No results to visualize")
-            return
-        
-        # Create figures directory
-        figures_dir = os.path.join(output_dir, 'figures')
-        os.makedirs(figures_dir, exist_ok=True)
-        
-        # Split by transformation type
-        translation_results = [r for r in results if r['pair_type'] == 'translation']
-        revision_results = [r for r in results if r['pair_type'] == 'revision']
-        
-        # Create simple comparison chart
-        plt.figure(figsize=(12, 8))
-        
-        # Group data by type
-        pair_names = []
-        regular_quality = []
-        enhanced_quality = []
-        pair_types = []
-        
-        for result in results:
-            pair_names.append(result['pair_name'][:15] + '...' if len(result['pair_name']) > 15 else result['pair_name'])
-            regular_quality.append(result['regular']['transformation_quality'])
-            enhanced_quality.append(result['enhanced']['transformation_quality'])
-            pair_types.append(result['pair_type'])
-        
-        x = np.arange(len(pair_names))
-        width = 0.35
-        
-        # Create bars with different colors for each type
-        plt.bar(x - width/2, regular_quality, width, label='Regular', 
-                color=['blue' if t == 'translation' else 'green' for t in pair_types])
-        plt.bar(x + width/2, enhanced_quality, width, label='Enhanced',
-                color=['red' if t == 'translation' else 'orange' for t in pair_types])
-        
-        plt.xlabel('Model Pairs')
-        plt.ylabel('Transformation Quality')
-        plt.title('Comparison by Transformation Type')
-        plt.xticks(x, pair_names, rotation=45, ha='right')
-        plt.legend()
-        plt.ylim(0, 1.0)
-        
-        # Add type labels
-        for i, pair_type in enumerate(pair_types):
-            plt.text(i, -0.05, pair_type[0].upper(), color='black', fontweight='bold', ha='center')
-        
-        plt.tight_layout()
-        plt.savefig(os.path.join(figures_dir, 'type_comparison.png'))
-        plt.close()
-        logging.info(f"Type comparison chart saved to {os.path.join(figures_dir, 'type_comparison.png')}")
-        
-    except Exception as e:
-        logging.error(f"Error creating detailed comparison visualizations: {str(e)}", exc_info=True)
+    def visualize_detailed_comparison(results, output_dir):
+        """Create a detailed visualization comparing approaches by transformation type"""
+        try:
+            if not results:
+                logging.warning("No results to visualize")
+                return
+            
+            # Create figures directory
+            figures_dir = os.path.join(output_dir, 'figures')
+            os.makedirs(figures_dir, exist_ok=True)
+            
+            # Split by transformation type
+            translation_results = [r for r in results if r['pair_type'] == 'translation']
+            revision_results = [r for r in results if r['pair_type'] == 'revision']
+            
+            # Create simple comparison chart
+            plt.figure(figsize=(12, 8))
+            
+            # Group data by type
+            pair_names = []
+            regular_quality = []
+            enhanced_quality = []
+            pair_types = []
+            
+            for result in results:
+                pair_names.append(result['pair_name'][:15] + '...' if len(result['pair_name']) > 15 else result['pair_name'])
+                regular_quality.append(result['regular']['transformation_quality'])
+                enhanced_quality.append(result['enhanced']['transformation_quality'])
+                pair_types.append(result['pair_type'])
+            
+            x = np.arange(len(pair_names))
+            width = 0.35
+            
+            # Create bars with different colors for each type
+            plt.bar(x - width/2, regular_quality, width, label='Regular', 
+                    color=['blue' if t == 'translation' else 'green' for t in pair_types])
+            plt.bar(x + width/2, enhanced_quality, width, label='Enhanced',
+                    color=['red' if t == 'translation' else 'orange' for t in pair_types])
+            
+            plt.xlabel('Model Pairs')
+            plt.ylabel('Transformation Quality')
+            plt.title('Comparison by Transformation Type')
+            plt.xticks(x, pair_names, rotation=45, ha='right')
+            plt.legend()
+            plt.ylim(0, 1.0)
+            
+            # Add type labels
+            for i, pair_type in enumerate(pair_types):
+                plt.text(i, -0.05, pair_type[0].upper(), color='black', fontweight='bold', ha='center')
+            
+            plt.tight_layout()
+            plt.savefig(os.path.join(figures_dir, 'type_comparison.png'))
+            plt.close()
+            logging.info(f"Type comparison chart saved to {os.path.join(figures_dir, 'type_comparison.png')}")
+            
+        except Exception as e:
+            logging.error(f"Error creating detailed comparison visualizations: {str(e)}", exc_info=True)
 
 def main():
     """Main function to run experiments"""

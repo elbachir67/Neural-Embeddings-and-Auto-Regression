@@ -199,7 +199,7 @@ class BidirectionalValidator:
         embedding_similarity = self._compute_embedding_similarity(source_embedding, target_embedding)
         
         # Blend scores with configurable weights
-        alpha = 0.7  # Weight for token-pair based score
+        alpha = 0.4  # Weight for token-pair based score
         enhanced_score = alpha * base_score + (1 - alpha) * embedding_similarity
         
         return enhanced_score
@@ -237,8 +237,7 @@ class BidirectionalValidator:
         fvs = self.compute_forward_validation_score(target_model, rules)
         bvs = self.compute_backward_validation_score(source_model, target_model)
         
-        # Set alpha based on intent (closer to 0.5 for translation, closer to 1 for revision)
-        alpha = 0.75 if intent == "revision" else 0.5
+        alpha = 0.7 if intent == "revision" else 0.4
         
         # Compute weighted combination
         tq = alpha * fvs + (1 - alpha) * bvs
@@ -250,9 +249,9 @@ class BidirectionalValidator:
         }
     
     def compute_enhanced_transformation_quality(self, source_model, target_model, rules, 
-                                               source_embedding, target_embedding, intent):
+                                           source_embedding, target_embedding, intent):
         """
-        Compute enhanced transformation quality using embeddings
+        Compute enhanced transformation quality using optimized parameters
         
         Args:
             source_model: Source model
@@ -268,16 +267,23 @@ class BidirectionalValidator:
         # Compute forward validation score
         fvs = self.compute_forward_validation_score(target_model, rules)
         
-        # Compute enhanced backward validation score
-        enhanced_bvs = self.compute_backward_validation_score_with_embeddings(
-            source_model, target_model, source_embedding, target_embedding, rules
-        )
-        
-        # Compute standard backward validation score for comparison
+        # Compute standard backward validation score
         standard_bvs = self.compute_backward_validation_score(source_model, target_model)
         
-        # Set alpha based on intent
-        alpha = 0.75 if intent == "revision" else 0.5
+        # Compute embedding similarity
+        embedding_similarity = self._compute_embedding_similarity(source_embedding, target_embedding)
+        
+        # Use optimized beta value from parameter optimization (0.7)
+        beta = 0.7
+        
+        # Compute enhanced backward validation score
+        enhanced_bvs = beta * standard_bvs + (1 - beta) * embedding_similarity
+        
+        # Use intent-specific alpha values from parameter optimization
+        if intent == "translation":
+            alpha = 0.5  # Optimized value for translation
+        else:  # revision
+            alpha = 0.7  # Optimized value for revision
         
         # Compute weighted combinations
         enhanced_tq = alpha * fvs + (1 - alpha) * enhanced_bvs
@@ -292,8 +298,11 @@ class BidirectionalValidator:
             "forward_validation_score": fvs,
             "enhanced_backward_validation_score": enhanced_bvs,
             "standard_backward_validation_score": standard_bvs,
+            "embedding_similarity": embedding_similarity,
             "improvement": improvement,
-            "intent": intent
+            "intent": intent,
+            "alpha": alpha,
+            "beta": beta
         }
     
     def evaluate_transformation_pair(self, source_model, target_model, rules, 
@@ -837,7 +846,7 @@ def compute_backward_validation_score_with_embeddings(self, source_model, target
     embedding_similarity = self._compute_embedding_similarity(source_embedding, target_embedding)
     
     # Blend scores with configurable weights
-    alpha = 0.7  # Weight for token-pair based score
+    alpha = 0.4  # Weight for token-pair based score
     enhanced_score = alpha * base_score + (1 - alpha) * embedding_similarity
     
     return enhanced_score
